@@ -49,7 +49,7 @@ wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chm
 ```
 - 14.Wajib Reboot
 - 15.Ketik: xmenu
-- 16.Pilih 9:Perbarui Sertifikat
+- 16.Pilih 9:Perbarui Sertifikat #SKIP
 - 17.Reboot dulu, baru bisa make.
 
 
