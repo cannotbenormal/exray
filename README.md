@@ -43,13 +43,32 @@ curl https://get.acme.sh | sh
 ~/.acme.sh/acme.sh --installcert -d webmu.my.id --key-file /root/private.key --fullchain-file /root/cert.crt
 
 ```
-- 13. Install Script
+- 13.Install Script
 ```
 wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
-- 14. ketik: xmenu
-- 15. Pilih 9:Perbarui Sertifikat
-- 16. reboot dulu, baru bisa make.
+- 14.Ketik: xmenu
+- 15.Pilih 9:Perbarui Sertifikat
+- 16.Reboot dulu, baru bisa make.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
