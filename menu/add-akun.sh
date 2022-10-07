@@ -308,6 +308,9 @@ END
 
 #
 #buatvmess
+vmessnomalak={"add":"141.193.213.20","aid":"0","host":"${domain}","id":"${uuid}","net":"ws","path":"wss:\/\/${domain}\/xrayvws","port":"443","ps":"xl vmess ws by ado xray mantap","tls":"tls","sni":"${domain}","type":"none","v":"2"}
+vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
+#
 clear
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "====== XRAY MANTAP Multi Port=======" | tee -a /etc/log-create-user.log
@@ -365,7 +368,9 @@ echo -e "====== Path =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "VMESS XL NO MALAK    : vmess://$vmessnomalakencode" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "SCRIPT MANTAP XRAY" | tee -a /etc/log-create-user.log
+echo -e "BLACKPINK IN YOUR AREA" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 cd
