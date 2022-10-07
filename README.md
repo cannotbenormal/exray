@@ -53,6 +53,9 @@ wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chm
 - 17.Reboot dulu, baru bisa make.
 
 
+nano /usr/bin/auto-pointing
+nano /usr/bin/auto-pointing
+nano /usr/bin/auto-pointing
 
 
 
