@@ -47,9 +47,10 @@ curl https://get.acme.sh | sh
 ```
 wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
-- 14.Ketik: xmenu
-- 15.Pilih 9:Perbarui Sertifikat
-- 16.Reboot dulu, baru bisa make.
+- 14.Wajib Reboot
+- 15.Ketik: xmenu
+- 16.Pilih 9:Perbarui Sertifikat
+- 17.Reboot dulu, baru bisa make.
 
 
 
