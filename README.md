@@ -1,3 +1,15 @@
+BISA SEMUA YANG DIBAWAH
+
+TERNYATA, SETELAH INSTALL, HARUS BISA JALANIN NO.9, INSTALL CERTIFICATE NYA 
+WAJIB JALAN NO.9 CARI SOLUSI DULU
+
+
+
+
+
+
+
+
 - ===== STEP ====
 - 0.Wajib Pointing sub/domain Cloudflare ke ip vps
 - 0.1 VPS Wajib Open All Port
