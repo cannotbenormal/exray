@@ -11,23 +11,23 @@
 - 8.login dengan root
 - 9.edit di script auto-pointing.sh dengan domain mu
 ```
-DOMAIN=adosange.my.id
-SUB_DOMAIN=jav-${sub}.adosange.my.id
-NS_DOMAIN=nsa-${sub}.adosange.my.id
+DOMAIN=webmu.my.id
+SUB_DOMAIN=jav-${sub}.webmu.my.id
+NS_DOMAIN=nsa-${sub}.webmu.my.id
 CF_ID=emailmu@gmail.com
 CF_KEY=key_global_mu_xxxxxxxxxxxxxxxxxxxxx
 ```
-- 10. Ganti Dengan Domain Kamu
+- 10.Ganti Dengan Domain Kamu
 ```
 cat >/root/domain <<EOF
-adosange.my.id
+webmu.my.id
 EOF
 ```
-- 11.
+- 11.Ganti Dengan Domain Kamu
 ```
 mkdir -p /etc/xray
 cat >/etc/xray/domain <<EOF
-adosange.my.id
+webmu.my.id
 EOF
 ```
 
