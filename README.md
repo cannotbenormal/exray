@@ -3,7 +3,7 @@
 - 0.1 VPS Wajib Open All Port
 - 1.WAJIB D. MONKEY 9-10 (Azure Tested D-10 Buster Gen.2 1 vcpu 1 GB Ram 9.93/month(free service eligible))
 - 2.sudo su
-- 3.passwd root
+- 3.passwd root    ~ JANGAN DI ROOT DULU, LG ERROR INI
 - 4.isipw
 - 5.nano /etc/ssh/sshd_config
 - 6.Ubah PermitRootLogin jadi -> PermitRootLogin yes (WAJIB BIAR BISA LOGIN MAKE ROOT)
@@ -31,7 +31,7 @@ webmu.my.id
 EOF
 ```
 
-- 12.Tambahin CERT SSL Let's Encrypt
+- 12.Tambahin CERT SSL Let's Encrypt  ~ JANGAN DULU DO, KALO ERROR BARU TAMBHAIN INI, BLOM NORMAL INI
 ```
 
 curl https://get.acme.sh | sh
