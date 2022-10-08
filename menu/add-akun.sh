@@ -361,7 +361,7 @@ echo -e "VLESS XL WS NO MALAK    : $vlessnomalak" | tee -a /etc/log-create-user.
 echo -e "Link Config WS TLS    : $vlesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS  : $vlesslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "Protokol VPN: VMESS (ISI MANUAL)" | tee -a /etc/log-create-user.log
+echo -e "Protokol VPN: VMESS" | tee -a /etc/log-create-user.log
 echo -e "Alter ID: 0" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
