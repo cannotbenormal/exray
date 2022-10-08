@@ -24,7 +24,7 @@ exit 0
 fi
 clear
 source /var/lib/crot/ipvps.conf
-if [[ "$IP" = " " ]]; then
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
 domain=$IP
@@ -35,36 +35,36 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[0;41;36m           XRAY ALL ACCOUNT          \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
-    read -rp "User: " -e user
-    user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+		read -rp "User: " -e user
+		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
-    if [[ ${user_EXISTS} == '1' ]]; then
+		if [[ ${user_EXISTS} == '1' ]]; then
 clear
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\E[0;41;36m           XRAY ALL ACCOUNT          \E[0m"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-      echo " "
-      echo "A client with the specified name was already created, please choose another name."
-      echo " "
-      echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-      read -n 1 -s -r -p "Press any key to back on menu"
-      menu
-    fi
-  done
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\E[0;41;36m           XRAY ALL ACCOUNT          \E[0m"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+			echo ""
+			echo "A client with the specified name was already created, please choose another name."
+			echo ""
+			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+			read -n 1 -s -r -p "Press any key to back on menu"
+			menu
+		fi
+	done
 #
 #
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
-},{"password": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
-},{"password": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 
 sed -i '/#vless$/a\#& '"$user $exp"'\
-},{"id": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
-},{"id": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 
 systemctl restart xray
 #buatvless
@@ -81,9 +81,9 @@ trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&hos
 #
 cipher="aes-128-gcm"
 sed -i '/#ssws$/a\### '"$user $exp"'\
-},{"password": "'" "$uuid" "'","method": "'" "$cipher" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#ssgrpc$/a\### '"$user $exp"'\
-},{"password": "'" "$uuid" "'","method": "'" "$cipher" "'","email": "'" "$user" "'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
 echo $cipher:$uuid > /tmp/log
 shadowsocks_base64=$(cat /tmp/log)
 echo -n "${shadowsocks_base64}" | base64 > /tmp/log1
@@ -308,7 +308,7 @@ END
 
 #
 #buatvmess
-vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':\"${domain}"\,'"id"':\"${uuid}"\,'"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':\"${domain}"\,'"type"':'"none"','"v"':'"2"'}
+vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':'"${domain}"','"id"':'"${uuid}"','"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':'"${domain}"','"type"':'"none"','"v"':'"2"'}
 vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
 #
 clear
@@ -321,7 +321,7 @@ echo -e "Password/ID: $uuid" | tee -a /etc/log-create-user.log
 echo -e "====== Service Port =======" | tee -a /etc/log-create-user.log
 echo -e "Websocket TLS  : 443" | tee -a /etc/log-create-user.log
 echo -e "Websocket HTTP : 80" | tee -a /etc/log-create-user.log
-echo -e "GRPC TLS : 443" | tee -a /etc/log-create-user.log
+echo -e "GRPC TLS       : 443" | tee -a /etc/log-create-user.log
 echo -e "*Note OPOK: opok only supports coremeta"
 echo -e "*Note SHADOWSOCKS: gunakan custom config atau plugin xray"
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
@@ -361,14 +361,16 @@ echo -e "VLESS XL WS NO MALAK    : $vlessnomalak" | tee -a /etc/log-create-user.
 echo -e "Link Config WS TLS    : $vlesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS  : $vlesslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "Protokol VPN: VMESS" | tee -a /etc/log-create-user.log
+echo -e "Protokol VPN: VMESS (ISI MANUAL)" | tee -a /etc/log-create-user.log
 echo -e "Alter ID: 0" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
-echo -e " " | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
 echo -e "VMESS XL NO MALAK    : vmess://$vmessnomalakencode" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "BLACKPINK IN YOUR AREA" | tee -a /etc/log-create-user.log
+echo "" | tee -a /etc/log-create-user.log
+cd
