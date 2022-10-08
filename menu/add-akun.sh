@@ -311,7 +311,8 @@ END
 ado=\"${domain}\"
 ado1=\"${uuid}\"
 ado2=\"${user}\"
-vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':$ado,'"id"':$ado1,'"net"':'"ws"','"path"':'"wss:\/\/$ado\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':$ado,'"type"':'"none"','"v"':'"2"'}
+ado3=\"wss://${domain}/xrayvws\"
+vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':$ado,'"id"':$ado1,'"net"':'"ws"','"path"':$ado3,'"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':$ado,'"type"':'"none"','"v"':'"2"'}
 vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
 #
 clear
