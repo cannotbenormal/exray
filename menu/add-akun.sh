@@ -24,7 +24,7 @@ exit 0
 fi
 clear
 source /var/lib/crot/ipvps.conf
-if [[ "$IP" = "" ]]; then
+if [[ "$IP" = " " ]]; then
 domain=$(cat /etc/xray/domain)
 else
 domain=$IP
@@ -43,9 +43,9 @@ clear
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\E[0;41;36m           XRAY ALL ACCOUNT          \E[0m"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-      echo ""
+      echo " "
       echo "A client with the specified name was already created, please choose another name."
-      echo ""
+      echo " "
       echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
       read -n 1 -s -r -p "Press any key to back on menu"
       menu
@@ -57,14 +57,14 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
 
 sed -i '/#vless$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"id": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"id": "'" "$uuid" "'","email": "'" "$user" "'"' /etc/xray/config.json
 
 systemctl restart xray
 #buatvless
@@ -81,9 +81,9 @@ trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&hos
 #
 cipher="aes-128-gcm"
 sed -i '/#ssws$/a\### '"$user $exp"'\
-},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'" "$uuid" "'","method": "'" "$cipher" "'","email": "'" "$user" "'"' /etc/xray/config.json
 sed -i '/#ssgrpc$/a\### '"$user $exp"'\
-},{"password": "'""$uuid""'","method": "'""$cipher""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'" "$uuid" "'","method": "'" "$cipher" "'","email": "'" "$user" "'"' /etc/xray/config.json
 echo $cipher:$uuid > /tmp/log
 shadowsocks_base64=$(cat /tmp/log)
 echo -n "${shadowsocks_base64}" | base64 > /tmp/log1
@@ -368,8 +368,7 @@ echo -e "====== Path =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
-echo -e "" | tee -a /etc/log-create-user.log
+echo -e " " | tee -a /etc/log-create-user.log
 echo -e "VMESS XL NO MALAK    : vmess://$vmessnomalakencode" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "BLACKPINK IN YOUR AREA" | tee -a /etc/log-create-user.log
-EOF
