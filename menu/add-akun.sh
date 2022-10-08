@@ -308,7 +308,7 @@ END
 
 #
 #buatvmess
-vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':'"${domain}"','"id"':'"${uuid}"','"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':'"${domain}"','"type"':'"none"','"v"':'"2"'}
+vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':\"${domain}"\,'"id"':\"${uuid}"\,'"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':\"${domain}"\,'"type"':'"none"','"v"':'"2"'}
 vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
 #
 clear
@@ -321,7 +321,7 @@ echo -e "Password/ID: $uuid" | tee -a /etc/log-create-user.log
 echo -e "====== Service Port =======" | tee -a /etc/log-create-user.log
 echo -e "Websocket TLS  : 443" | tee -a /etc/log-create-user.log
 echo -e "Websocket HTTP : 80" | tee -a /etc/log-create-user.log
-echo -e "GRPC TLS       : 443" | tee -a /etc/log-create-user.log
+echo -e "GRPC TLS : 443" | tee -a /etc/log-create-user.log
 echo -e "*Note OPOK: opok only supports coremeta"
 echo -e "*Note SHADOWSOCKS: gunakan custom config atau plugin xray"
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
