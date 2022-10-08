@@ -19,7 +19,7 @@ if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}IDIOT !!!"
+echo -e "${NC}${LIGHT}Fuck You!!"
 exit 0
 fi
 clear
@@ -66,15 +66,20 @@ sed -i '/#vless$/a\#& '"$user $exp"'\
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 
+sed -i '/#vmess$/a\#& '"$user $exp"'\
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+sed -i '/#vmessgrpc$/a\#& '"$user $exp"'\
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+
+
+#
 systemctl restart xray
 #buatvless
-vlessnomalak="vless://${uuid}@141.193.213.20:443?security=tls&encryption=none&headerType=none&type=ws&path=wss://${domain}/xrayws&sni=${domain}&host=${domain}#${user}"
 vlesslinkws="vless://${uuid}@${domain}:443?path=/xrayws&security=tls&encryption=none&type=ws#${user}"
 vlesslinknon="vless://${uuid}@${domain}:80?path=/xrayws&encryption=none&type=ws#${user}"
 vlesslinkgrpc="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 
 #buattrojan
-trojannomalak="trojan://${uuid}@141.193.213.20:443?security=tls&type=ws&headerType=none&path=wss://${domain}/xraytrojanws&sni=${domain}&host=${domain}#${user}"
 trojanlinkgrpc="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
 #buatshadowsocks
@@ -315,6 +320,7 @@ ado3=\"wss://${domain}/xrayvws\"
 vmessnomalak={'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':$ado,'"id"':$ado1,'"net"':'"ws"','"path"':$ado3,'"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':$ado,'"type"':'"none"','"v"':'"2"'}
 vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
 #
+#buatvmess
 clear
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "====== XRAY MANTAP Multi Port=======" | tee -a /etc/log-create-user.log
@@ -338,6 +344,7 @@ echo -e "=> GRPC   : trojan-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xraytrojanws" | tee -a /etc/log-create-user.log
 echo -e "====== Import Config From Clipboard =======" | tee -a /etc/log-create-user.log
 echo -e "TROJAN-WS XL NO MALAK   : $trojannomalak" | tee -a /etc/log-create-user.log
+echo -e " " | tee -a /etc/log-create-user.log
 echo -e "Link Config WS TLS   : $trojanlinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS : $trojanlinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
@@ -361,20 +368,18 @@ echo -e "=> WS TLS : /xrayws" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vless-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xrayws" | tee -a /etc/log-create-user.log
 echo -e "====== Import Config From Clipboard =======" | tee -a /etc/log-create-user.log
-echo -e "VLESS XL WS NO MALAK    : $vlessnomalak" | tee -a /etc/log-create-user.log
 echo -e "Link Config WS TLS    : $vlesslinkws" | tee -a /etc/log-create-user.log
 echo -e "Link Config GRPC TLS  : $vlesslinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "Protokol VPN: VMESS (ISI MANUAL)" | tee -a /etc/log-create-user.log
+echo -e "Protokol VPN: VMESS" | tee -a /etc/log-create-user.log
 echo -e "Alter ID: 0" | tee -a /etc/log-create-user.log
 echo -e "Network: WS/GRPC" | tee -a /etc/log-create-user.log
 echo -e "====== Path =======" | tee -a /etc/log-create-user.log
 echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
 echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
 echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
-echo -e "" | tee -a /etc/log-create-user.log
 echo -e "VMESS XL NO MALAK    : vmess://$vmessnomalakencode" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "BLACKPINK IN YOUR AREA" | tee -a /etc/log-create-user.log
+echo -e "SCRIPT MANTAP XRAY" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 cd
