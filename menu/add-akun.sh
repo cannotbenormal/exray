@@ -372,3 +372,4 @@ echo -e "" | tee -a /etc/log-create-user.log
 echo -e "VMESS XL NO MALAK    : vmess://$vmessnomalakencode" | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 echo -e "BLACKPINK IN YOUR AREA" | tee -a /etc/log-create-user.log
+EOF
