@@ -308,7 +308,7 @@ END
 
 #
 #buatvmess
-'{'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':'"${domain}"','"id"':'"${uuid}"','"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':'"${domain}"','"type"':'"none"','"v"':'"2"''}'
+vmessnomalak='{'"add"':'"141.193.213.20"','"aid"':'"0"','"host"':'"${domain}"','"id"':'"${uuid}"','"net"':'"ws"','"path"':'"wss:\/\/${domain}\/xrayvws"','"port"':'"443"','"ps"':'"Vmess XL No Malak By Ado"','"tls"':'"tls"','"sni"':'"${domain}"','"type"':'"none"','"v"':'"2"''}'
 vmessnomalakencode=$(echo -ne "$vmessnomalak" | base64);
 #
 clear
