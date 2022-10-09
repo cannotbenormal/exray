@@ -26,6 +26,8 @@ WAJIB JALAN NO.9 CARI SOLUSI DULU
 - 8.login dengan root
 - Putty Auto Login Root : "C:\Program Files\PuTTY\putty.exe" root@xxx.xxx.xxx.xxx -pw passwordmu
 - 9.edit di script auto-pointing.sh dengan domain mu
+- nano /usr/bin/auto-pointing
+
 ```
 DOMAIN=webmu.my.id
 SUB_DOMAIN=jav-${sub}.webmu.my.id
