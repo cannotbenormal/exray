@@ -19,7 +19,10 @@ WAJIB JALAN NO.9 CARI SOLUSI DULU
 - 4.isipw
 - 5.nano /etc/ssh/sshd_config
 - 6.Ubah PermitRootLogin jadi -> PermitRootLogin yes (WAJIB BIAR BISA LOGIN MAKE ROOT)
-- 7.apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+- 7.UPDATE
+```
+    apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+```
 - 8.login dengan root
 - 9.edit di script auto-pointing.sh dengan domain mu
 ```
