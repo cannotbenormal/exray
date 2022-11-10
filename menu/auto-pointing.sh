@@ -21,7 +21,7 @@ echo "$SUB_DOMAIN" >> /etc/v2ray/domain
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 DOMAIN=adosange.my.id
-SUB_DOMAIN=jav-${sub}.adosange.my.id
+SUB_DOMAIN=hk-${sub}.adosange.my.id
 NS_DOMAIN=nsa-${sub}.adosange.my.id
 CF_ID=adoceunah@gmail.com
 CF_KEY=ac047003f8c4f106f356e0ce02c7d95a3a398
