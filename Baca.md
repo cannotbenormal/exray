@@ -21,7 +21,7 @@ WAJIB JALAN NO.9 CARI SOLUSI DULU
 - 6.Ubah PermitRootLogin jadi -> PermitRootLogin yes (WAJIB BIAR BISA LOGIN MAKE ROOT)
 - 7.UPDATE
 ```
-    apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
 - 8.login dengan root
 - Putty Auto Login Root : "C:\Program Files\PuTTY\putty.exe" root@xxx.xxx.xxx.xxx -pw passwordmu
