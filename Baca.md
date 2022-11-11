@@ -1,3 +1,48 @@
+1.STEP EXRAY
+2.login biasa dulu
+3.sudo su
+4.passwd root
+5.nano /etc/ssh/sshd_config
+6.jangan keluar
+7.apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+8.Wajib Reboot Dulu, Biar Bisa Login Root, Abis Edit sshd_config nya, harus di restart service dia, makanya lgsg reboot aja,
+9.bikin autologin rootnya
+10."C:\Program Files\PuTTY\putty.exe" root@20.211.177.153 -pw zxcv
+11.taro di taskbar
+12.Di Cloudflare, Pointing IP & Sub/Domain Dulu
+[Wajib First - Bikin Domain Dulu haha]
+13.Bikin:
+cat >/root/domain <<EOF
+austoket.adosange.my.id
+EOF
+
+14.Bikin:
+
+mkdir -p /etc/xray
+cat >/etc/xray/domain <<EOF
+austoket.adosange.my.id
+EOF
+
+15.Baru install Script:
+wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chmod +x setup.sh && ./setup.sh
+
+16.reboot Lagi wajib
+17.xmenu
+18.Pilih Perbarui Sertifikat : 9
+19.xmenu
+20.Check Nama Domain: 3 - Pastikan Benar
+21.xmenu - 1 : Bikin User - Expired 360
+22.Copy All To Clipboard
+23.Reboot
+24.Sukses Bro, Tinggal Test Semua Protocol.
+25.Tapi Gabisa Komen Youtube, Make Australia aja, ga di blok2 dia
+qatar-india-japan-korea, ada blok2 nya dia
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 BISA SEMUA YANG DIBAWAH
 
 TERNYATA, SETELAH INSTALL, HARUS BISA JALANIN NO.9, INSTALL CERTIFICATE NYA 
