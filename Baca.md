@@ -1,3 +1,4 @@
+```
 1.STEP EXRAY
 2.login biasa dulu
 3.sudo su
@@ -37,7 +38,7 @@ wget https://raw.githubusercontent.com/cannotbenormal/exray/main/setup.sh && chm
 24.Sukses Bro, Tinggal Test Semua Protocol.
 25.Tapi Gabisa Komen Youtube, Make Australia aja, ga di blok2 dia
 qatar-india-japan-korea, ada blok2 nya dia
-
+```
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
